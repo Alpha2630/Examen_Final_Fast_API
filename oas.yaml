@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: STD24090
+  version: 1.0.0
+paths:
+  /books:
+    get:
+      summary: Get all books
+      responses:
+        '200':
+          description: This is a specification of STD24090
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 'http://localost:8000'
+    post:
+      summary: Add a new reference
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '$ref: 'http://localost:8000''
+      responses:
+        '201':
